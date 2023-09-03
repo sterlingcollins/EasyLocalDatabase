@@ -15,11 +15,11 @@ The easiest way to install `ezlocaldb` is with pip
 To work with `sqlalchemy` use `getEngine` to get an `engine` object for database access. The first argument to `getEngine` is the name of your application, which is used to uniquely specify the database.
 
 ```python
-from ezlocaldb import getEngine
+from ezlocaldb import get_engine
 from sqlalchemy import Session
 
 # Get an sqlalchemy engine to use with sqlalchemy.Session
-engine = getEngine("MyAmazingApp")
+engine = get_engine("MyAmazingApp")
 
 with Session(engine) as session:
     # Now work with session to initalize database,
