@@ -2,7 +2,7 @@ import pytest  # noqa: F401
 
 from sqlalchemy import Engine
 
-import ezlocaldatabase as ezdb
+import ezlocaldb as ezdb
 
 appname = "MyAppName"
 

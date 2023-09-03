@@ -3,11 +3,11 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ezlocaldatabase"
+name = "ezlocaldb"
 authors = [
     {name = "Sterling Collins", email = "sterlingcollins@gmail.com"},
 ]
-description = "Easy SQL databases for no-sweat persistence"
+description = "Easy local SQL databases for no-sweat persistence"
 readme = "README.md"
 requires-python = ">=3.10"
 keywords = ["Database", "SQL", "Persistence"]
