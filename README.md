@@ -1,5 +1,8 @@
 # ezlocaldb
+
 Version 0.0.0
+
+Under Construction
 
 Easy, local databases for no-sweat persistence. This convinience package wraps
 small parts of `appdirs`, `sqlite3`, and `sqlalchemy`, to easily create
@@ -11,7 +14,6 @@ will save you some time too.
 
 ### PIP
 The easiest way to install `ezlocaldb` is with pip
-
 ```bash
   pip install ezlocaldb
 ```
