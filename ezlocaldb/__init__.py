@@ -40,14 +40,14 @@ def _setupDB(app_name: str, db_name: str) -> Tuple[Path, bool]:
     return db_path, freshDB
 
 
-def _getDBPath(app_name: str, db_name: str) -> Path:
+def _getDBPath(app_name: str, db_name: str = DEFAULT_NAME) -> Path:
     """Return DB Path, without creating any of the intermediate files/folders."""
     db_dir = Path(appdirs.user_data_dir(appname=app_name))
     db_path = db_dir / db_name
     return db_path
 
 
-def removeDatabase(app_name: str, db_name: str = DEFAULT_NAME) -> None:
+def remove_database(app_name: str, db_name: str = DEFAULT_NAME) -> None:
     """Remove database file.
 
     Also removes the data folder tree, if it is empty."""
