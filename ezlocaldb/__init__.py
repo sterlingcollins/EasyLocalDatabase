@@ -35,7 +35,7 @@ def _setupDB(app_name: str, db_name: str) -> Tuple[Path, bool]:
 
     db_path = _getDBPath(app_name, db_name)
     db_path.parent.mkdir(parents=True, exist_ok=True)
-    freshDB = ~db_path.exists()
+    freshDB = not db_path.exists()
     db_path.touch(exist_ok=True)
     return db_path, freshDB
 

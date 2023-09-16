@@ -30,7 +30,7 @@ class Base(DeclarativeBase):
     pass
 
 
-class TestObjects(Base):
+class ObjectTest(Base):
     __tablename__ = "TestingTable"
     id: Mapped[int] = mapped_column(primary_key=True)
     testfield: Mapped[str]
@@ -66,17 +66,17 @@ def test_CRUD_and_multiple_engines():
     eng2 = ezdb.get_engine(appName, metadata=Base.metadata)
 
     with Session(eng1) as ses:
-        t1 = TestObjects(testfield="hello")
+        t1 = ObjectTest(testfield="hello")
         ses.add(t1)
         ses.commit()
 
     with Session(eng2) as ses:
-        t2 = ses.query(TestObjects).scalar()
+        t2 = ses.query(ObjectTest).scalar()
         assert t2.testfield == "hello"
         ses.delete(t2)
         ses.commit()
 
     with Session(eng1) as ses:
-        assert ses.query(TestObjects).scalar() is None
+        assert ses.query(ObjectTest).scalar() is None
 
     ezdb.remove_database(appName)
