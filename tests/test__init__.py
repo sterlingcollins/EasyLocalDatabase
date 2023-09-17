@@ -1,7 +1,5 @@
 from typing import Optional
 
-import pytest  # noqa: F401
-
 from sqlalchemy import Engine, MetaData
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 
