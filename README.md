@@ -1,6 +1,6 @@
 # ezlocaldb
 
-Version 0.0.0
+Version 0.0.1
 
 Easy, local databases for no-sweat persistence. This convinience package wraps
 small parts of `appdirs`, `sqlite3`, and `sqlalchemy`, to easily create
