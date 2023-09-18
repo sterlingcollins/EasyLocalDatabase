@@ -1,8 +1,6 @@
 # ezlocaldb
 
-Version 0.0.0
-
-Under Construction
+Version 0.0.1
 
 Easy, local databases for no-sweat persistence. This convinience package wraps
 small parts of `appdirs`, `sqlite3`, and `sqlalchemy`, to easily create
@@ -84,9 +82,9 @@ If you make changes to your ORM structure, you can use `remove_database` from a
 repl or other function, and call `get_engine` with the `metadata` argument again,
 and the new database will reflect all your new structure.
 
-> **A not on migrations**.
+> **A note on migrations**.
 > Database migrations are a complicated subject. If you want to keep your data
 > while you revise your ORM structure or Database Schema, you're probably ready
-> to graduate to straight `SQLAlchemy`, and look at `Alembic`.
+> to graduate to using full `SQLAlchemy`, and look at `Alembic`.
 
 ### Thank You!
